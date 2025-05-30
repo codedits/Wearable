@@ -147,24 +147,7 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.second-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
 
-.second-content h3 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.second-content p {
-    font-size: 1.1rem;
-    font-weight: 400;
-}
 
 /* Responsive Styles */
 @media (max-width: 550px) {
@@ -246,8 +229,9 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px 16px;
+    padding: 450px 16px;
     transition: transform 0.2s, box-shadow 0.2s;
+    
     text-align: center;
     position: relative;
     z-index: 2;
@@ -275,19 +259,17 @@ h2{
     color: #ffffff;
 }
 
-.catalog-card .price {
-    font-weight: bold;
-    color: #000000;
-    font-size: 1.1rem;
-    margin-top: auto;
-}
+
 
 /* Responsive for mobile */
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .catalog {
         flex-direction: column;
         align-items: center;
         gap: 24px;
+    }
+    .text{
+        font-size: 1px;
     }
     .catalog-card {
         width: 90vw;
@@ -312,20 +294,44 @@ h2{
     background-image: url("Media/2149633155.webp");
     
 }
-.catalog {
-    /* Remove animation here */
+.third-section {
+    background-image: url("Media/soccer-game-concept.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 80vh;
+    position: relative;
+    justify-content: baseline;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+.box3{
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire section */
+    z-index: 1;
+}
+.text{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30vh;
+    padding: 4vw;
+    font-size: 1.5rem;
+    position: relative;  /* Required for z-index to work */
+    z-index: 2;  
+}
+@media (max-width: 700px) {
+    
 
-.catalog.animate {
-    animation: slideUp 1s ease-out;
+    .text{
+        font-size: 1.3rem;
+    }
 }
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.text h2 {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
 }
