@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    display: flex
+    
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main section background and overlay */
+main {
+    background-image: url("Media/gg.jpg");
+    min-height: 80vh;
+    width: 100vw;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+main .box {
+    opacity: 0.7;
+    min-height: 80vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 18px;
+    position: relative;
+    z-index: 2;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    height: 32px;
+    width: auto;
+    margin: 0;
+    margin-top: 13px;
+}
+
+nav h1 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+   margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    
+    gap: 22px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 0;
+    margin: 0;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Head text overlay animation */
+.head {
+    
+    color: white;
+    margin: auto;
+    padding: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    text-align: center;        /* Align text inside each child element */
+    flex-direction: column;    /* Stack children vertically (optional) */
+    z-index: 1;
+
+}
+
+
+
+
+/* Second background section */
+.second-section {
+    background-image: url("Media/a-photograph-depicting-a-single-folded-b_gZ57jXpBTsqlkTh1y5ky0g_JgpwLnepT2CSdMVGX2zXOg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 80vh;
+    position: relative;
+    
+}
+
+.box2 {
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire section */
+    z-index: 1;
+}
+
+.second-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.second-content h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.second-content p {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 550px) {
+    
+    .catalog{
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 8px 8px;
+    }
+
+    .brand {
+        margin-bottom: 8px;
+    }
+
+    nav ul {
+        gap: 12px;
+        width: 100%;
+        justify-content: ce;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 6px 0;
+    }
+
+    main, main .box {
+        min-height: 60vh;
+    }
+
+    .second-content h3 {
+        font-size: 2rem;
+    }
+
+    .second-content p {
+        font-size: 1rem;
+    }
+}
+@media(max-width: 1000px){
+    .head{
+        justify-content: flex-start;
+    }
+    .head h3{
+        font-size: 1rem;
+        
+        overflow: hidden;
+    }
+    
+}
+h2{
+    transition: transform 1s cubic-bezier(0.4, 0.2, 0.2, 1), color 0.75s, text-shadow 1s;
+}
+.head h2:hover{
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    transform: scale(1.08);
+    
+}
+/* ...existing code... */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    min-height: 60vh;
+    padding: 32px 0;
+    background: transparent;
+    
+}
+
+.catalog-card {
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    width: 240px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.catalog-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.catalog-card h4 {
+    font-size: 1.7rem;
+    font-family: "Poppins", sans-serif;
+    margin-top: 220px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding-left: 22px;
+    padding-bottom: 14px;
+    font-weight: 300;
+  font-style: normal;
+    color: #ffffff;
+}
+
+.catalog-card .price {
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.1rem;
+    margin-top: auto;
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+    .catalog {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .catalog-card {
+        width: 90vw;
+        min-width: 0;
+        min-height: 220px;
+        padding: 18px 8px;
+    }
+}
+#c1 {
+    background-image: url("Media/serious-young-man-standing-isolated-grey.webp");
+}
+#c2 {
+    background-image: url("Media/stretching.webp");
+}
+#c3 {
+    background-image: url("Media/high-angle-teen-holding-skateboard.webp");
+}
+#c4 {
+    background-image: url("Media/1__IhenCq47-RX1cFqFaoa5g.webp");
+}
+#c5 {
+    background-image: url("Media/2149633155.webp");
+    
+}
+.catalog {
+    /* Remove animation here */
+}
+
+.catalog.animate {
+    animation: slideUp 1s ease-out;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
